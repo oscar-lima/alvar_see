@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+	<node pkg="microsoft_cam_driver" type="camera_tf" name="microsoft_cam_tf" respawn="false" > </node>
+  
+	<node pkg="usb_cam" type="usb_cam_node" name="microsoft_cam" respawn="true" >  
+		<param name="video_device" value="/dev/youbot/microsoft_life_cam" />
+		<param name="pixel_format" value="yuyv" />
+		<param name="camera_frame_id" value="microsoft_camera_frame" />
+	</node>
+
+</launch>

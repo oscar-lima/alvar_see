@@ -1,0 +1,22 @@
+<launch>
+	
+	<!-- Define the alvar pattern marker size in cm -->
+	<arg name="marker_size" default="4.8" />
+	
+	<!-- Define error values -->
+	<arg name="max_new_marker_error" default="0.08" />
+	<arg name="max_track_error" default="0.2" />
+	
+	<!-- Define the topic where the raw image come from -->
+	<arg name="cam_image_topic" default="/microsoft_cam/image_raw" />
+	
+	<!-- Define the topic where the calibration info comes from -->
+	<arg name="cam_info_topic" default="/microsoft/camera_info" />
+	
+	<!-- Define the frame where the rgb data comes from (typically camera frame) -->
+	<arg name="output_frame" default="/microsoft_camera_frame" />
+	
+	<!-- Run alvar node, passing as command line arguments the previous values -->
+	<node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkersNoKinect" respawn="false" output="screen" args="$(arg marker_size) $(arg max_new_marker_error) $(arg max_track_error) $(arg cam_image_topic) $(arg cam_info_topic) $(arg output_frame)" />
+	
+</launch>

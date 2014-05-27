@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <name>microsoft_cam_driver</name>
+  <version>1.0.0</version>
+  <description>	
+				1.this node publishes a tf with the tripod position in which
+				the microsoft life cam is being hold.
+				This node was developed for the SEE class (Scientific experimentation
+				and evaluation) in order to track robots with alvar tag markers
+				
+				2.this node publishes instrinsic and extrinsic parameters of the camera
+  </description>
+  <maintainer email="olima_84@yahoo.com">Oscar Lima</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>tf</run_depend>
+</package>

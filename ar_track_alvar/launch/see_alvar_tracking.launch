@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!-- Alvar tracking general launch file, launches all required nodes by alvar tracking -->
+
+	<!-- microsoft intrinsec parameters publisher -->
+	<node pkg="microsoft_cam_driver" type="microsoft_params" name="microsoft_cam_params" required="true"> </node>
+  
+	<!-- alvar tracker node -->
+	<include file="$(find ar_track_alvar)/launch/see_microsoft_alvar.launch"/>
+	
+	<!-- microsoft driver: usb_cam, and camera tf wrt world frame -->
+	<include file="$(find microsoft_cam_driver)/launch/microsoft_life_cam.launch"/>
+
+</launch>
