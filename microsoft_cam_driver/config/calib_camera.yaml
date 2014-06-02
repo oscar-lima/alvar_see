@@ -1,0 +1,20 @@
+image_width: 1280
+image_height: 720
+camera_name: microsoft_vga
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [991.724628, 0, 621.728230, 0, 992.667952, 372.420225, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.015701, -0.045052, 0.001905, 0.001862, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [989.876404, 0, 622.020246, 0, 0, 993.077576, 372.806094, 0, 0, 0, 1, 0]
