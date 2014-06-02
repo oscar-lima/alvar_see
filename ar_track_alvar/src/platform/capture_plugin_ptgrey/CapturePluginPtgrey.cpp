@@ -127,7 +127,8 @@ bool CapturePtgrey::start()
         return false;
     }
 
-    mReturnFrame = cvCreateImage(cvSize(mXResolution, mYResolution), IPL_DEPTH_8U, mChannels);
+    //mReturnFrame = cvCreateImage(cvSize(mXResolution, mYResolution), IPL_DEPTH_8U, mChannels);
+    mReturnFrame = cvCreateImage(cvSize(1280, 720), IPL_DEPTH_8U, mChannels);
     if (mCamera->StartCapture() != FlyCapture2::PGRERROR_OK) {
         return false;
     }
