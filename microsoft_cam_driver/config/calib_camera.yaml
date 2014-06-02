@@ -1,20 +1,30 @@
+#http://docs.ros.org/api/sensor_msgs/html/msg/CameraInfo.html
 image_width: 1280
 image_height: 720
+
 camera_name: microsoft_vga
+
+#intrinsec camera matrix: fx, 0, cx, 0, fy, cy, 0, 0, 1
 camera_matrix:
   rows: 3
   cols: 3
-  data: [991.724628, 0, 621.728230, 0, 992.667952, 372.420225, 0, 0, 1]
+  data: [986.850104572031455, 0, 665.348461419446153, 0, 988.118484081610404, 363.356231456133571, 0, 0, 1]
+
 distortion_model: plumb_bob
+
 distortion_coefficients:
   rows: 1
   cols: 5
-  data: [0.015701, -0.045052, 0.001905, 0.001862, 0]
+  data: [0.008074374328575, 0.034674385654999, 0.001283151079462, 0.001711242916490, 0.0]
+
+#only for stereo camera, since it is normal camera then identity matrix:
 rectification_matrix:
   rows: 3
   cols: 3
   data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+
+#fx, 0, cx, Tx,, 0, fy, cy, Ty, 0, 0, 1, 0
 projection_matrix:
   rows: 3
   cols: 4
-  data: [989.876404, 0, 622.020246, 0, 0, 993.077576, 372.806094, 0, 0, 0, 1, 0]
+  data: [986.850104572031455, 0, 665.348461419446153, 0, 0, 988.118484081610404, 363.356231456133571, 0, 0, 0, 1, 0]
