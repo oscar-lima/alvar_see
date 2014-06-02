@@ -19,13 +19,10 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+#declaring camera tf publisher executable
 add_executable(camera_tf src/microsoft_tf_pub.cpp)
-add_executable(microsoft_params src/calib_pub.cpp)
 
+#linking previous declared executable with ros libraries
 target_link_libraries(camera_tf
-   ${catkin_LIBRARIES}
-)
-
-target_link_libraries(microsoft_params
    ${catkin_LIBRARIES}
 )
