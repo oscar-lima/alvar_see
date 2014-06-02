@@ -8,10 +8,10 @@
 	<arg name="max_track_error" default="0.2" />
 	
 	<!-- Define the topic where the raw image come from -->
-	<arg name="cam_image_topic" default="/microsoft_cam/image_raw" />
+	<arg name="cam_image_topic" default="/microsoft_cam_driver/image_raw" />
 	
 	<!-- Define the topic where the calibration info comes from -->
-	<arg name="cam_info_topic" default="/microsoft/camera_info" />
+	<arg name="cam_info_topic" default="/microsoft_cam_driver/camera_info" />
 	
 	<!-- Define the frame where the rgb data comes from (typically camera frame) -->
 	<arg name="output_frame" default="/microsoft_camera_frame" />
