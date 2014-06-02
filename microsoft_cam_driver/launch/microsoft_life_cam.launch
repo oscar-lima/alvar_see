@@ -6,7 +6,7 @@
   
 	<!-- running usb camera generic driver for /dev/video1 device -->
 	<node pkg="usb_cam" type="usb_cam_node" name="microsoft_cam_driver" respawn="true" >  
-		<param name="video_device" value="/dev/video1" />
+		<param name="video_device" value="/dev/youbot/microsoft_life_cam" />
 		<param name="pixel_format" value="yuyv" />
 		<param name="camera_frame_id" value="microsoft_camera_frame" />
 		<param name="image_width" value="1280" />
