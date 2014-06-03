@@ -18,6 +18,7 @@ Features:
 - Microsoft resolution HD of 1280 x 720 pixels
 - Tf camera publisher assuming a tripod and world frame in 0,0
 - Instrinsec and extrinsec paramter support via yaml configuration file inside confif folder
+- alvar rviz config file available under roscd ar_track_alvar/rviz
 
 Instructions:
 
